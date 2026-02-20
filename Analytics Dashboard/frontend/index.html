@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Analytics Dashboard</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+=== FILE: analytics-dashboard/frontend/.env.example ===
+env
+
+VITE_API_URL=http://localhost:3001/api
+VITE_SOCKET_URL=http://localhost:3001
+VITE_APP_NAME=Analytics Dashboard
+
+=== FILE: analytics-dashboard/frontend/src/vite-env.d.ts ===
+typescript
+
+/// <reference types="vite/client" />
+
+interface ImportMetaEnv {
+  readonly VITE_API_URL: string
+  readonly VITE_SOCKET_URL: string
+  readonly VITE_APP_NAME: string
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}

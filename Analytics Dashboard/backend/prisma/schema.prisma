@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Analytics {
+  id          String   @id @default(uuid())
+  timestamp   DateTime
+  revenue     Float
+  users       Int
+  sessions    Int
+  bounceRate  Float
+  conversion  Float
+  region      String
+  category    String
+  source      String
+
+  @@index([timestamp])
+  @@index([region])
+  @@index([category])
+  @@index([source])
+}
