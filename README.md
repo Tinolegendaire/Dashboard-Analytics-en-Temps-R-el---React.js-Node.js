@@ -1,0 +1,2 @@
+# Dashboard-Analytics-en-Temps-R-el---React.js-Node.js
+Interface de visualisation de données pour le suivi des KPIs business en temps réel avec mise à jour automatique toutes les 30 secondes.  Stack technique : • Frontend : React.js (Hooks), Redux pour state management • Visualisations : Chart.js, Recharts pour graphiques interactifs • Backend : Node.js + Express, API REST • WebSocket : Socket.io 
